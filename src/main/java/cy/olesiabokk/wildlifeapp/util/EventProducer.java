@@ -3,27 +3,6 @@ package cy.olesiabokk.wildlifeapp.util;
 import cy.olesiabokk.wildlifeapp.entity.Manul;
 
 public class EventProducer {
-    // 10 манул поспал
-    // 10 манул пробежал
-    // 10 манул съел мышь
-    // 10 манул съел зайца hare
-    // 10 манул съел сурка Marmot
-    // 10 манул поиграл с другим манулом
-    // 10 манул защищает территорию от другого манула
-    // 10 на манула напала лиса
-    // 10 на манула напала собака
-    // 10 манул ищет укрытие чтобы спрятаться
-    // 10 манул приводит себя в порядок, умывается и чистит мех
-
-
-//    public void startGame(Manul manul) {
-//        attackedByDog(manul);
-//        System.out.println(manul.getEnergy() + " " + manul.getHealthLevel());
-//        attackedByDog(manul);
-//        System.out.println(manul.getEnergy() + " " + manul.getHealthLevel());
-//        attackedByDog(manul);
-//        System.out.println(manul.getEnergy() + " " + manul.getHealthLevel());
-//   }
     public void startGame(Manul manul) throws InterruptedException {
         while (isAlive(manul)) {
             switch (getResult()) {
@@ -66,13 +45,13 @@ public class EventProducer {
         System.out.println("Manul had a good and interesting life. Now he's going to Manuls' Heaven");
     }
 
-    private int getResult(){
+    private int getResult() {
         int a = (int) (Math.random() * 100);
-        if (a >= 0 && a <= 7){
+        if (a >= 0 && a <= 7) {
             return 1;
         } else if (a >= 8 && a <= 16) {
             return 2;
-        } else if (a >=17 && a <= 25) {
+        } else if (a >= 17 && a <= 25) {
             return 3;
         } else if (a >= 26 && a <= 34) {
             return 4;
@@ -124,7 +103,7 @@ public class EventProducer {
         health = health + (int) (manul.getJawCoeff() * 5);
         manul.setHealthLevel(health);
         checkHealth(manul);
-        System.out.println("Congrats! Manul caught a mouse and recovered health. Current energy = " + manul.getEnergy()+ " Current health = " + manul.getHealthLevel());
+        System.out.println("Congrats! Manul caught a mouse and recovered health. Current energy = " + manul.getEnergy() + " Current health = " + manul.getHealthLevel());
     }
 
     private void eatHare(Manul manul) {
@@ -148,7 +127,7 @@ public class EventProducer {
         health = health + (int) (manul.getJawCoeff() * 8);
         manul.setHealthLevel(health);
         checkHealth(manul);
-        System.out.println("Fantastic! Manul caught a marmot and recovered health. Current energy = " + manul.getEnergy()+ " Current health = " + manul.getHealthLevel());
+        System.out.println("Fantastic! Manul caught a marmot and recovered health. Current energy = " + manul.getEnergy() + " Current health = " + manul.getHealthLevel());
     }
 
     private void playNewFriend(Manul manul) {

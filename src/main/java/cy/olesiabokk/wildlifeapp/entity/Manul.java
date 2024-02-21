@@ -1,8 +1,8 @@
 package cy.olesiabokk.wildlifeapp.entity;
 
 public class Manul {
-    private int healthPoint = 29;
-    private int energy = 0;
+    private int healthPoint = 100;
+    private int energy = 100;
     private final double jawCoefficient = 1.8;
 
     public int getHealthLevel() {
