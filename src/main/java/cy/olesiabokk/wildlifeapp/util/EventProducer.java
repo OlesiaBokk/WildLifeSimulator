@@ -57,15 +57,15 @@ public class EventProducer {
             return 4;
         } else if (a >= 35 && a <= 43) {
             return 5;
-        } else if (a >= 44 && a <= 51) {
+        } else if (a >= 44 && a <= 50) {
             return 6;
-        } else if (a >= 52 && a <= 60) {
+        } else if (a >= 51 && a <= 62) {
             return 7;
-        } else if (a >= 61 && a <= 69) {
+        } else if (a >= 63 && a <= 74) {
             return 8;
-        } else if (a >= 70 && a <= 78) {
+        } else if (a >= 75 && a <= 81) {
             return 9;
-        } else if (a >= 79 && a <= 87) {
+        } else if (a >= 82 && a <= 89) {
             return 10;
         } else {
             return 11;
@@ -100,8 +100,7 @@ public class EventProducer {
         energy = energy - 7;
         manul.setEnergy(energy);
         checkEnergy(manul);
-        health = health + (int) (manul.getJawCoeff() * 5);
-        manul.setHealthLevel(health);
+        manul.setHealthLevel(manul.getHealthLevel() + (int) (manul.getJawCoeff() * 3));
         checkHealth(manul);
         System.out.println("Congrats! Manul caught a mouse and recovered health. Current energy = " + manul.getEnergy() + " Current health = " + manul.getHealthLevel());
     }
@@ -160,8 +159,7 @@ public class EventProducer {
         energy = energy - 7;
         manul.setEnergy(energy);
         checkEnergy(manul);
-        health = health - 9;
-        manul.setHealthLevel(health);
+        manul.setHealthLevel(manul.getHealthLevel() - 10);
         checkHealth(manul);
         System.out.println("Manul was attacked by fox. Manul lost some energy and was hit. Current energy = " + manul.getEnergy() + " Current health = " + manul.getHealthLevel());
     }
@@ -172,8 +170,7 @@ public class EventProducer {
         energy = energy - 10;
         manul.setEnergy(energy);
         checkEnergy(manul);
-        health = health - 12;
-        manul.setHealthLevel(health);
+        manul.setHealthLevel(manul.getHealthLevel() - 15);
         checkHealth(manul);
         System.out.println("Oh no! Dog attacked manul. Manul lost some energy and was seriously bitten. Current energy = " + manul.getEnergy() + " Current health = " + manul.getHealthLevel());
     }
