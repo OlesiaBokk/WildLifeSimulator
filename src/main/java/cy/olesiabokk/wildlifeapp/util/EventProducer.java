@@ -5,7 +5,7 @@ import cy.olesiabokk.wildlifeapp.entity.Manul;
 public class EventProducer {
     public void startGame(Manul manul) throws InterruptedException {
         while (isAlive(manul)) {
-            switch (getResult()) {
+            switch (getRandomNumber()) {
                 case 1:
                     sleep(manul);
                     break;
@@ -45,7 +45,7 @@ public class EventProducer {
         System.out.println("Manul had a good and interesting life. Now it goes to Manuls' Heaven.");
     }
 
-    private int getResult() {
+    private int getRandomNumber() {
         int a = (int) (Math.random() * 100);
         if (a >= 0 && a <= 7) {
             return 1;
