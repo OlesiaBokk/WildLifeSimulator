@@ -173,7 +173,7 @@ public class EventProducer {
     }
 
     public void checkHealth(Manul manul) {
-        if (manul.getHealthLevel() <= 0) {
+        if (manul.getHealthLevel() < 0) {
             manul.setHealthLevel(0);
         } else if (manul.getHealthLevel() > 100) {
             manul.setHealthLevel(100);
